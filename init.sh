@@ -12,7 +12,7 @@ fi
 
 # Download .bashrc from the repository
 echo "Downloading .bashrc from GitHub..."
-curl -fsSL "$BASHRC_URL" -o "$HOME/.bashrc"
+curl -fsSL "$BASHRC_URL" >> "$HOME/.bashrc"
 source "$HOME/.bashrc"
 
 # Set up environment variables system-wide
