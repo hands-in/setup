@@ -12,5 +12,6 @@ fi
 # Download .bashrc from the repository
 echo "Downloading .bashrc from GitHub..."
 curl -fsSL "$BASHRC_URL" -o "$HOME/.bashrc"
+source "$HOME/.bashrc"
 
 echo "Installation complete."
