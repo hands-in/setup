@@ -23,12 +23,9 @@ preexec_invoke_exec() {
         fi
     fi
 
-    escaped_command=$(printf '%q ' "$BASH_COMMAND")
-
     # Prefix the command with `op run --`
-    command_to_run="op run -- $escaped_command"
-    eval "$command_to_run"
-    return $?  # Return the status of the executed command
+    eval "op run -- $BASH_COMMAND"
+    return - #$?  # Return the status of the executed command
 }
 
 # Set a DEBUG trap to execute the function before every command
