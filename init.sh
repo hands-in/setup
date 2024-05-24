@@ -16,10 +16,10 @@ curl -fsSL "$BASHRC_URL" -o "$HOME/.bashrc"
 source "$HOME/.bashrc"
 
 # Set up environment variables system-wide
-sudo tee /etc/profile.d/handsin.sh > /dev/null << 'EOF'
-export OP_ACCOUNT="handsin.1password.com"
-export GH_PACKAGE_TOKEN="op://development/github/GH_PACKAGE_TOKEN"
-export OP_CONFIG_DIR="/config/op"
-EOF
+# sudo tee /etc/profile.d/handsin.sh > /dev/null << 'EOF'
+# export OP_ACCOUNT="handsin.1password.com"
+# export GH_PACKAGE_TOKEN="op://development/github/GH_PACKAGE_TOKEN"
+# export OP_CONFIG_DIR="/config/op"
+# EOF
 
 echo "Installation complete."
