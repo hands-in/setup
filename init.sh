@@ -7,7 +7,7 @@ ENVS_URL="https://raw.githubusercontent.com/hands-in/setup/main/envs.sh"
 # Backup existing .bashrc file if it exists
 if [ -f "$HOME/.bashrc" ]; then
     echo "Backing up existing .bashrc file..."
-    mv "$HOME/.bashrc" "$HOME/.bashrc.bak"
+    cp "$HOME/.bashrc" "$HOME/.bashrc.bak"
 fi
 
 # Download .bashrc from the repository
