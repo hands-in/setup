@@ -24,7 +24,7 @@ preexec_invoke_exec() {
     fi
 
     # Prefix the command with `op run --`
-    command_to_run="op run -- $BASH_COMMAND"
+    command_to_run="op run -- '$BASH_COMMAND'"
     eval "$command_to_run"
     return $?  # Return the status of the executed command
 }
