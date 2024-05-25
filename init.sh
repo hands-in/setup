@@ -2,7 +2,6 @@
 
 # URL of the .bashrc file in the public Git repository
 BASHRC_URL="https://raw.githubusercontent.com/hands-in/setup/main/.bashrc"
-ENVS_URL="https://raw.githubusercontent.com/hands-in/setup/main/envs.sh"
 
 # Backup existing .bashrc file if it exists
 if [ -f "$HOME/.bashrc" ]; then
@@ -11,15 +10,8 @@ if [ -f "$HOME/.bashrc" ]; then
 fi
 
 # Download .bashrc from the repository
-echo "Downloading .bashrc from GitHub..."
+echo "Downloading .bashrc from Hands In GitHub..."
 curl -fsSL "$BASHRC_URL" >> "$HOME/.bashrc"
 source "$HOME/.bashrc"
 
-# Set up environment variables system-wide
-# sudo tee /etc/profile.d/handsin.sh > /dev/null << 'EOF'
-# export OP_ACCOUNT="handsin.1password.com"
-# export GH_PACKAGE_TOKEN="op://development/github/GH_PACKAGE_TOKEN"
-# export OP_CONFIG_DIR="/config/op"
-# EOF
-
-echo "Installation complete."
+echo "Hands In Bashrc Installation complete."
